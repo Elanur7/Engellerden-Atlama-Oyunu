@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr" onclick="zipla()">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engellerden Atlama Oyunu</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: url(arkaplan.jpg);
+        }
+        
+        #oyun {
+            width: 1350px;
+            height: 530px;
+            margin: 118px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #oyuncu {
+            position: absolute;
+            width: 64px;
+            height: 101px;
+            background: url(oyuncu.PNG);
+            bottom: 0;
+        }
+        
+        .oyuncu-animate {
+            animation: oyuncu .5s linear;
+        }
+        
+        #score {
+            height: auto;
+            width: auto;
+            position: absolute;
+            top: 250px;
+            right: 50px;
+        }
+        
+        #kus_engel {
+            position: absolute;
+            width: 52px;
+            height: 24px;
+            background: url(kus_engel.PNG);
+            left: 700px;
+            top: 410px;
+        }
+        
+        .kus_engel-animate {
+            animation: kus_engel 2s linear infinite;
+        }
+        
+        #engel {
+            position: absolute;
+            width: 61px;
+            height: 76px;
+            background: url(engel.PNG);
+            bottom: 0;
+            left: 1280px;
+        }
+        
+        .engel-animate {
+            animation: engel 3s linear infinite;
+        }
+        
+        @keyframes engel {
+            0% {
+                left: 1280px;
+            }
+            100% {
+                left: -70px
+            }
+        }
+        
+        @keyframes kus_engel {
+            0% {
+                left: 900px;
+            }
+            100% {
+                left: -70px
+            }
+        }
+        
+        @keyframes oyuncu {
+            0% {
+                bottom: 0px;
+            }
+            25% {
+                bottom: 140px;
+            }
+            35% {
+                bottom: 190px;
+            }
+            50% {
+                bottom: 220px;
+            }
+            65% {
+                bottom: 190px;
+            }
+            75% {
+                bottom: 160px;
+            }
+            85% {
+                bottom: 130px;
+            }
+            100% {
+                bottom: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="oyun">
+        <div id="oyuncu"></div>
+
+        <div id="engel"></div>
+        <div id="kus_engel"></div>
+    </div>
+    <div id="score">
+        score <b>00</b></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
